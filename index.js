@@ -12,21 +12,21 @@ mongoose.connect("mongodb://localhost/recipeApp", { useNewUrlParser: true });
 // });
 
 // Iteration 2
-Recipe.create({
-  title: "Tacos",
-  level: "Amateur Chef",
-  ingredients: ["Corn", "Salsa", "...etc"],
-  cuisine: "Whatever",
-  dishType: "Dish",
-  duration: 120,
-  creator: "Me"
-})
-  .then(recipe => {
-    console.log(recipe.title);
-  })
-  .catch(err => {
-    console.error(err);
-  });
+// Recipe.create({
+//   title: "Tacos",
+//   level: "Amateur Chef",
+//   ingredients: ["Corn", "Salsa", "...etc"],
+//   cuisine: "Whatever",
+//   dishType: "Dish",
+//   duration: 120,
+//   creator: "Me"
+// })
+//   .then(recipe => {
+//     console.log(recipe.title);
+//   })
+//   .catch(err => {
+//     console.error(err);
+//   });
 
 // Iteration 3
 // Recipe.insertMany(data)
@@ -40,9 +40,10 @@ Recipe.create({
 //   });
 
 // Iteration 4
-// Recipe.findByIdAndUpdate("5caf97eef46aab578d24484c", { duration: 100 })
-//   .then(recipe => {
-//     console.log(`Update of ${recipe.title} successful!`);
+// Recipe.findByIdAndUpdate("5caf9f84f074e55b21236bbb", { duration: 100 })
+// Recipe.updateOne({ title: "Rigatoni alla Genovese" }, { duration: 100 })
+//   .then(update => {
+//     console.log("Update: success!");
 //   })
 //   .catch(err => {
 //     console.error(err);
@@ -50,19 +51,12 @@ Recipe.create({
 
 // Iteration 5
 // Recipe.findByIdAndRemove("5caf97eef46aab578d24484b")
-//   .then(recipe => {
-//     console.log(`Delete of ${recipe.title} successful!`);
+// Recipe.deleteOne({ title: "Carrot Cake" })
+//   .then(remove => {
+//     console.log("Delete: success!");
 //   })
 //   .catch(err => {
 //     console.error(err);
 //   });
 
 // Iteration 6
-// mongoose.connection
-//   .close()
-//   .then(() => {
-//     console.log("Disconnected!");
-//   })
-//   .catch(err => {
-//     console.error("Error disconnecting", err);
-//   });
